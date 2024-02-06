@@ -1,0 +1,230 @@
+:root {
+  --scale: 1.5;
+  --x: 1.5px;
+  --y: 1.5px;
+  --startx: 1.5px;
+  --starty: 1.5px;
+}
+
+div {
+  position: relative;
+  display: inline;
+}
+
+.imtip {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.find {
+  transition: 1s;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+.img {
+  position: fixed;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
+}
+
+
+.background {
+  position: fixed;
+  z-index: 1;
+}
+
+@keyframes zoomin {
+  from {
+    scale: 1;
+    z-index: 20;
+    opacity: 1;
+  }
+
+  to {
+    scale: var(--scale);
+    z-index: 20;
+    opacity: 0.5;
+    top: var(--x);
+    left: var(--y);
+  }
+}
+
+.center {
+  position: fixed;
+  margin-left: 50%;
+  z-index: 100;
+  transform: translate(-50%, 0%);
+}
+
+
+.door {
+
+  position: fixed;
+  z-index: 3;
+
+}
+
+.overlay1 {
+  position: fixed;
+  top: 330px;
+  left: 790px;
+  z-index: 5;
+  background: rgb(0, 0, 0);
+  background: rgba(248, 255, 146, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 60px;
+  height: 60px;
+  transition: .5s ease;
+  opacity: 0;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: BabyDoll;
+  padding: 20px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: BabyDoll;
+  src: url(Baby\ Doll.ttf);
+}
+
+.zoom {
+  animation-name: zoomin;
+  animation-duration: 1s;
+}
+
+.zoompoint {
+  animation: zoomintopoint 1s ease-in;
+}
+
+.container:hover .overlay1 {
+  opacity: 1;
+}
+
+.overlay2 {
+  position: fixed;
+  top: 330px;
+  left: 650px;
+  z-index: 6;
+  background: rgb(0, 0, 0);
+  background: rgba(248, 255, 146, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 60px;
+  height: 60px;
+  transition: .5s ease;
+  opacity: 0;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: BabyDoll;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.container:hover .overlay2 {
+  opacity: 1;
+}
+
+.overlay3 {
+  position: fixed;
+  cursor: pointer;
+  top: 500px;
+  left: 650px;
+  z-index: 7;
+  background: rgb(0, 0, 0);
+  background: rgba(248, 255, 146, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 60px;
+  height: 60px;
+  transition: .5s ease;
+  opacity: 0;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: BabyDoll;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay3 {
+  opacity: 1;
+}
+
+
+.overlay4 {
+  position: fixed;
+  cursor: pointer;
+  top: 500px;
+  left: 790px;
+  z-index: 7;
+  background: rgb(0, 0, 0);
+  background: rgba(248, 255, 146, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 60px;
+  height: 60px;
+  transition: .5s ease;
+  opacity: 0;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: BabyDoll;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay4 {
+  opacity: 1;
+}
+
+
+
+.fade {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 100;
+  opacity: 0;
+  animation: fade 1s ease-in;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Centering the text box */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.text-box {
+  border-radius: 10px;
+  border-style: dotted;
+  padding: 20px;
+  width: 900px;
+  font-family: BabyDoll;
+  font-size: 20px;
+}

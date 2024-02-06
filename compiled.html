@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        :root{
+  --scale: 1.5;
+  --x: 1.5px;
+  --y: 1.5px;
+  --startx: 1.5px;
+  --starty: 1.5px;
+}
+div {
+  position: relative;
+  display: inline;
+}
+
+.imtip {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.find {
+  transition: 1s;
+}
+h1 {
+  text-align: center;
+}
+
+
+.img {
+  position: fixed;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
+}
+
+
+.background {
+  position: fixed;
+  z-index: 1;
+}
+
+@keyframes zoomin {
+  from {
+    scale: 1;
+    z-index: 20;
+    opacity: 1;
+  }
+
+  to {
+    scale: var(--scale);
+    z-index: 20;
+    opacity: 0.5;
+    top: var(--x);
+    left: var(--y);
+  }
+}
+
+.center {
+  position: fixed;
+  margin-left: 50%;
+  z-index: 100;
+  transform: translate(-50%, 0%);
+}
+
+
+.door {
+
+  position: fixed;
+  z-index: 3;
+
+}
+
+
+
+.overlay1 {
+  position: fixed;
+  top: 330px;
+  left: 790px;
+  z-index: 5;
+  background: rgb(0, 0, 0);
+  background: rgba(248, 255, 146, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 60px;
+  height: 60px;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  text-align: center;
+}
+
+.zoom {
+  animation-name: zoomin;
+  animation-duration: 1s;
+}
+.zoompoint {
+  animation: zoomintopoint 1s ease-in;
+}
+.container {
+  cursor: pointer;
+}
+.container:hover .overlay1 {
+  opacity: 1;
+}
+
+.overlay2 {
+  position: fixed;
+  top: 330px;
+  left: 650px;
+  z-index: 6;
+  background: rgb(0, 0, 0);
+  background: rgba(248, 255, 146, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 60px;
+  height: 60px;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay2 {
+  opacity: 1;
+}
+
+.overlay3 {
+  position: fixed;
+  top: 500px;
+  left: 650px;
+  z-index: 7;
+  background: rgb(0, 0, 0);
+  background: rgba(248, 255, 146, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 60px;
+  height: 60px;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay3 {
+  opacity: 1;
+}
+
+
+.overlay4 {
+  position: fixed;
+  top: 500px;
+  left: 790px;
+  z-index: 7;
+  background: rgb(0, 0, 0);
+  background: rgba(248, 255, 146, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 60px;
+  height: 60px;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay4 {
+  opacity: 1;
+}
+    </style>
+    <canvas id="canvas">
+
+    </canvas>
+
+
+    <script src="index.js">
+
+    </script>
+
+
+
+    <head>
+        <a href="index.html" class="center">
+            <img src="LightsOn2.png" height="100" width="200">
+        </a>
+    </head>
+
+
+
+
+    <center>
+
+        <img class="background find" src="housebase.png" width="800" height="600" style="top: 120px;left: 555px;" />
+
+        <div class="container" onclick="animateAndChange('music.html', document.getElementById('window1'))">
+            <img class="img find" src="window.png" width="100" height="100" style="top: 330px;left: 790px;"
+                id="window1" />
+            <div class="overlay1">Music</div>
+        </div>
+
+        <div class="container" onclick="animateAndChange('movies.html', document.getElementById('window2'))">
+            <img class="img find" src="window.png" width="100" height="100" style="top: 330px;left: 650px;"
+                id="window2" />
+            <div class="overlay2">Movies</div>
+        </div>
+
+        <div class="container" onclick="animateAndChange('books.html', document.getElementById('window3'))">
+            <img class="img find" src="window.png" width="100" height="100" style="top: 500px;left: 650px;"
+                id="window3" />
+            <div class="overlay3">Books</div>
+        </div>
+
+
+        <div class="container" onclick="animateAndChange('books.html', document.getElementById('window4'))">
+            <img class="img find" src="window.png" width="100" height="100" style="top: 500px;left: 790px;"
+                id="window4" />
+            <div class="overlay4">Games</div>
+        </div>
+
+        <a onclick="animateAndChange('cars.html', document.getElementById('garage'))">
+            <img class="img find" src='garage.png' id="garage" style="top: 519px; left: 940px;"
+                onmouseover="this.src='garage2.png';" onmouseout="this.src='garage.png';" width="300" height="200" />
+
+        </a>
+
+        <a href="door.html">
+            <img class="door find" src="door.png" style="top: 600px; left: 725px;" width="80" height="120">
+        </a>
+
+
+
+
+
+    </center>
+    <script>
+        function randomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function createStars(width, height, spacing) {
+  const stars = [];
+
+  for (let x = 0; x < width; x += spacing) {
+    for (let y = 0; y < height; y += spacing) {
+      const star = {
+        x: x + randomInt(spacing),
+        y: y + randomInt(spacing),
+        r: Math.random() * maxStarRadius
+      };
+      stars.push(star);
+    }
+  }
+  return stars;
+}
+
+function fillCircle(ctx, x, y, r, fillStyle) {
+  ctx.beginPath();
+  ctx.fillStyle = fillStyle;
+  ctx.arc(x, y, r, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function renderMoon(ctx, blur) {
+  fillCircle(ctx, moon.x, moon.y, moon.r, moon.color);
+  // render a smaller circle above the moon to give it that well-known moon-shape
+  fillCircle(
+    ctx,
+    moon.x - moon.r / 3,
+    moon.y - moon.r / 3,
+    moon.r,
+    backgroundColor
+  );
+}
+
+function getOpacity(factor) {
+  const opacityIncrement =
+    (maxStarOpacity - minStarOpacity) * Math.abs(Math.sin(factor));
+  const opacity = minStarOpacity + opacityIncrement;
+  return opacity;
+}
+
+function render() {
+  ctx.fillStyle = backgroundColor;
+  ctx.fillRect(0, 0, width, height);
+  stars.forEach(function (star, i) {
+    const factor = counter * i;
+    const x = star.x;
+    const y = star.y;
+    const opacity = getOpacity(factor);
+    fillCircle(ctx, x, y, star.r, ` rgba(255, 255, 255, ${opacity} `);
+  });
+
+  renderMoon(ctx);
+
+  counter++;
+  requestAnimationFrame(render);
+}
+
+const backgroundColor = "#030318";
+let width = window.innerWidth;
+let height = window.innerHeight;
+const maxStarRadius = 1.5;
+const minStarOpacity = 0.5;
+const maxStarOpacity = 1;
+const stars = createStars(width, height, 30);
+const moon = {
+  color: "#fea",
+  x: height / 3,
+  y: width / 3,
+  r: 40
+};
+
+const canvas = document.querySelector("#canvas");
+const ctx = canvas.getContext("2d");
+canvas.width = width;
+canvas.height = height;
+
+window.onresize = function () {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  width = window.innerWidth;
+  height = window.innerHeight;
+}
+let counter = 0;
+render();
+
+function animateAndChange(url, element) {
+  let scaler = 10;
+  let els = document.getElementsByClassName("find");
+
+  [].forEach.call(els, function (el) {
+    let elTop = parseInt(el.style.top,10);
+    let elLeft = parseInt(el.style.left,10)
+    let elementTop = parseInt(element.style.top,10);
+    let elementLeft = parseInt(element.style.left,10);
+    let ydistance = elTop - elementTop;
+    let xdistance = elLeft - elementLeft;
+    let newYpos = elTop + ydistance * scaler;
+    let newXpos = elLeft + xdistance * scaler;
+    console.log((newYpos - ydistance))
+    el.style.top = ((window.innerHeight / 2 ) * scaler - newYpos - ydistance) + "px";
+    el.style.left = ((window.innerWidth/2) * scaler - newXpos - xdistance) + "px";
+    el.style.width = (parseInt(el.width,10) * scaler) + "px";
+    el.style.height = (parseInt(el.height,10) * scaler) + "px";
+
+  });
+  setTimeout(() => { location.reload(); location.href = url }, 1000);
+  
+}
+    </script>
+</body>
+</html>

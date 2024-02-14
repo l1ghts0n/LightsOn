@@ -64,6 +64,10 @@ h1 {
 }
 
 
+.mobilelogo {
+  z-index: 100;
+}
+
 .door {
 
   position: fixed;
@@ -71,25 +75,7 @@ h1 {
 
 }
 
-.overlay1 {
-  position: fixed;
-  top: 330px;
-  left: 790px;
-  z-index: 5;
-  background: rgb(0, 0, 0);
-  background: rgba(248, 255, 146, 0.5);
-  /* Black see-through */
-  color: #f1f1f1;
-  width: 60px;
-  height: 60px;
-  transition: .5s ease;
-  opacity: 0;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  font-family: BabyDoll;
-  padding: 20px;
-  text-align: center;
-}
+
 
 @font-face {
   font-family: BabyDoll;
@@ -105,102 +91,8 @@ h1 {
   animation: zoomintopoint 1s ease-in;
 }
 
-.container:hover .overlay1 {
-  opacity: 1;
-}
-
-.overlay2 {
-  position: fixed;
-  top: 330px;
-  left: 650px;
-  z-index: 6;
-  background: rgb(0, 0, 0);
-  background: rgba(248, 255, 146, 0.5);
-  /* Black see-through */
-  color: #f1f1f1;
-  width: 60px;
-  height: 60px;
-  transition: .5s ease;
-  opacity: 0;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  font-family: BabyDoll;
-  padding: 20px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.container:hover .overlay2 {
-  opacity: 1;
-}
-
-.overlay3 {
-  position: fixed;
-  cursor: pointer;
-  top: 500px;
-  left: 650px;
-  z-index: 7;
-  background: rgb(0, 0, 0);
-  background: rgba(248, 255, 146, 0.5);
-  /* Black see-through */
-  color: #f1f1f1;
-  width: 60px;
-  height: 60px;
-  transition: .5s ease;
-  opacity: 0;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  font-family: BabyDoll;
-  padding: 20px;
-  text-align: center;
-}
-
-.container:hover .overlay3 {
-  opacity: 1;
-}
 
 
-.overlay4 {
-  position: fixed;
-  cursor: pointer;
-  top: 500px;
-  left: 790px;
-  z-index: 7;
-  background: rgb(0, 0, 0);
-  background: rgba(248, 255, 146, 0.5);
-  /* Black see-through */
-  color: #f1f1f1;
-  width: 60px;
-  height: 60px;
-  transition: .5s ease;
-  opacity: 0;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  font-family: BabyDoll;
-  padding: 20px;
-  text-align: center;
-}
-
-.container:hover .overlay4 {
-  opacity: 1;
-}
-
-
-
-.fade {
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  z-index: 100;
-  opacity: 0;
-  animation: fade 1s ease-in;
-  display: block;
-  pointer-events: none;
-  user-select: none;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
 
 @keyframes fade {
   0% {
@@ -227,4 +119,18 @@ h1 {
   width: 900px;
   font-family: BabyDoll;
   font-size: 20px;
+  z-index: 100;
+}
+
+.font {
+
+  font-family: BabyDoll;
+  color: white;
+  font-size: large;
+
+}
+
+.mobilelist {
+  font-family: BabyDoll;
+  font-size: xx-large;
 }

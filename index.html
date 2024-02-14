@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
     <style>
         body,
@@ -22,10 +21,13 @@
     </title>
     <link href="style.css" rel="stylesheet" type="text/css" />
 
-
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+   
 
 </head>
-
 
 
 <body>
@@ -52,14 +54,14 @@
 
     <center>
 
-        <img class="background find" src="housebase.png" width="800" height="600" style="top: 120px;left: 555px;" />
+        <img class="background find" src="housebase.png" style="top: 11.4vh;left: 30vw; width: 40vw; height: 30vw;"/>
 
         <a href="music.html">
 
             <div class="container">
-                <img class="img find" src="window.png" width="100" height="100" style="top: 330px;left: 790px; "
-                    id="window1" />
-                <div class="overlay1">Music</div>
+                <img class="img find" src="window.png"  style="top: 33vh;left: 41.5vw; width: 6vw; height: 6vw;"
+                    id="window1" 
+                    onmouseover="this.src='windowon.png';" onmouseout="this.src='window.png';"/>
             </div>
 
         </a>
@@ -67,9 +69,10 @@
         <a href="movies.html">
 
             <div class="container">
-                <img class="img find" src="window.png" width="100" height="100" style="top: 330px;left: 650px; "
-                    id="window2" />
-                <div class="overlay2">Movies</div>
+                <img class="img find" src="window.png"  style="top: 33vh;left: 34vw; width: 6vw; height: 6vw;"
+                    id="window2" 
+                    onmouseover="this.src='windowon.png';" onmouseout="this.src='window.png';"/>
+
             </div>
 
         </a>
@@ -77,9 +80,8 @@
         <a href="books.html">
 
             <div class="container">
-                <img class="img find" src="window.png" width="100" height="100" style="top: 500px;left: 650px; "
-                    id="window3" />
-                <div class="overlay3">Books</div>
+                <img class="img find" src="window.png" style="top: 48vh;left: 34vw; width: 6vw; height: 6vw;" id="window3" 
+                onmouseover="this.src='windowon.png';" onmouseout="this.src='window.png';"/>
             </div>
 
         </a>
@@ -87,32 +89,31 @@
         <a href="games.html">
 
             <div class="container">
-                <img class="img find" src="window.png" width="100" height="100" style="top: 500px;left: 790px; "
-                    id="window4" />
-                <div class="overlay4">Games</div>
+                <img class="img find" src="window.png" style="top: 48vh;left: 41.5vw; width: 6vw; height: 6vw;" id="window4" 
+                onmouseover="this.src='windowon.png';" onmouseout="this.src='window.png';" />
             </div>
 
         </a>
 
         <a href="cars.html"">
-            <img class=" img find" src='garage.png' id="garage" style="top: 519px; left: 940px;"
-            onmouseover="this.src='garage2.png';" onmouseout="this.src='garage.png';" width="300" height="200" />
-
+            <img class=" img find" src='garage.png' id="garage" style="top: 51vh;left: 50vw; width: 14vw; height: 10vw;"
+            onmouseover="this.src='garage2.png';" onmouseout="this.src='garage.png';"/>
         </a>
 
         <a href="door.html">
-            <img class="door find" src="door.png" style="top: 600px; left: 725px;" width="80" height="120">
+            <img class="door find" src="door.png" style="top: 60vh;left: 38.5vw; width: 4vw; height: 6vw;" onmouseover="this.src='dooropen.png';" onmouseout="this.src='door.png';" >
         </a>
 
+      
 
+        
 
 
 
     </center>
 
-
     <audio autoplay loop>
-        <source src="Fly-Me-To-The-Moon.mp3" type="audio/mpeg">
+        <source src="By-The-Light-Of-The-Silv'ry-Moon.mp3" type="audio/mpeg">
     </audio>
 
 </body>

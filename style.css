@@ -134,3 +134,16 @@ h1 {
   font-family: BabyDoll;
   font-size: xx-large;
 }
+
+
+
+#audioWrapper {
+  top: 50vh;
+  display: block;
+}
+
+audio {
+  top: 50vh;
+  width: 100%;
+  z-index: 500
+}
